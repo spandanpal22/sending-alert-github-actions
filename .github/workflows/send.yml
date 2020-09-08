@@ -3,6 +3,7 @@ name: SendAlert
 on:
   schedule:
     - cron:  '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -24,7 +25,7 @@ jobs:
         run: |
             python sendAlert.py
         env:
-          IS_ACTIVATED: 1 # 1 for activated and 0 for not activated
+          IS_ACTIVATED: ${{ secrets.IS_ACTIVATED }} # 1 for activated and 0 for deactivated
           SSID: ${{ secrets.SSID }}
           AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
           TO_NUMBER: ${{ secrets.TO_NUMBER }}
