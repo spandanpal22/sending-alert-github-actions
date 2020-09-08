@@ -12,7 +12,7 @@ def send_simple_message():
 			"subject": "Hello",
 			"text": "Testing some Mailgun awesomness!"})
 
-if(os.environ['IS_ACTIVATED']==1):
+if(os.environ['IS_ACTIVATED']=='1'):
     response=send_simple_message()
     print("Response EMAIL",response)
 
