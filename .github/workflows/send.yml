@@ -31,9 +31,8 @@ jobs:
           TO_NUMBER: ${{ secrets.TO_NUMBER }}
           FROM_NUMBER: ${{ secrets.FROM_NUMBER }}
           MAILGUN_API_KEY: ${{ secrets.MAILGUN_API_KEY }}
-          SANDBOX_URL: ${{ secrets.SANDBOX_URL }}
-          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          MAILGUN_URL: ${{ secrets.MAILGUN_URL }}
         
       - name: Done
         run: echo Done
